@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="don.html" method="get">
+        <!-- form태그는 action이라는 속성으로 결과하면을 제공. method는 백엔드 개발 분야로 정보를 취합해서 보낼 때 보내는 방법을 설정하는 것. -->
+
+        <fieldset>
+            <!-- form태그 안에 1개 이상을 사용할 수 있으며, 입력 받는 정보들을 감싸는 태그이다. -->
+
+            <legend>회원가입 양식 폼</legend>
+            <!-- legend는 fieldset의 h1과 같은 것. =제목태그(legend 태그는 무조건 사용해야 한다. 대부분 hidden을 사용해서 숨긴다. 그럼에도 사용하는 이유는 시각장애인들을 위해서) -->
+
+            <table>
+                <caption>회원가입 입력양식 테이블</caption>
+                <!-- table태그는 연봉 테이블의 테이블과 같은 뜻으로 부장, 과장, 차장처럼 구분되어 있는 것처럼 층층마다 레이블로 구분해준다. -->
+
+                <!-- table : 입력받을 정보들의 레이어들을 정리하는 태그, 즉 사용자가 입력할 내용을 포함하는 태그 -->
+                <!-- caption : table의 제목 태그 -->
+
+                <tr>
+                    <!-- tr : table row의 약자로 하위 개념으로 th, td가 있다. -->
+                    <th scope="row">
+                        <!-- th : table header의 약자 (유저를 위한 것.) -->
+                        <label for="username">이름</label>
+                        <!-- label의 특징으로, for의 값과 td의 id값을 동일하게 하여 input에 입력된 값을 백엔드 개발자에게 전송해줄 수 있다.  -->
+                    </th>
+                    <td>
+                        <!-- td : table description의 약자 (백엔드 개발자를 위한 것.) -->
+                        <!-- input:text -->
+                        <input type="text" name="username" id="username">
+                        <!-- td의 name은 백엔드 개발자에게 보내는 메시지, id는 label태그의 for 속성값과 연동시켜 백엔드 개발자에게 전송하는 것이다. -->
+                    </td>
+                </tr>
+                <tr>
+                    <!-- th와 td를 작성할 때, th>label의 for 값과 td>input의 id값을 항상 동일하게 작성한다. -->
+                    <th scope="row">
+                        <!--  여기서의 scope는 거리의 개념이 아니고, 방향의 개념이다.  -->
+                        <label for="pwd">비밀번호</label>
+                    </th>
+                    <td>
+                        <input type="password" name="pwd" id="pwd">
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">취미</th>
+                    <td>
+                        <input type="checkbox" name="hobby" id="Reading">
+                        <label for="Reading">독서</label>
+                        <input type="checkbox" name="hobby" id="Music">
+                        <label for="Music">음악 감상</label>
+                        <input type="checkbox" name="hobby" id="Game">
+                        <label for="Game">게임</label>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">성별</th>
+                    <td>
+                        <input type="radio" name="gender" id="male">
+                        <label for="male">남자</label>
+                        <input type="radio" name="gender" id="female">
+                        <label for="female">여자</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">
+                        <label for="company">통신사</label>
+                    </th>
+                    <td>
+                        <select name="company" id="company">
+                            <option value="">통신사</option>
+                            <option value="SKT">SKT</option>
+                            <option value="KT">KT</option>
+                            <option value="LG U+">LG U+</option>
+                            <option value="알뜰폰">알뜰폰</option>
+                            <!--  -->
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>
+                        <label for="comments">남기는 말</label>
+                    </th>
+                    <td>
+                        <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>
+                        <input type="reset" value="초기화">
+                        <input type="submit" value="제출">
+                    </th>
+                </tr>
+
+            </table>
+        </fieldset>
+    </form>
+    <!-- form : 회원가입 사이트를 만들 때 사용(정보를 입력해서 상호작용하는 것.)
+    method는 웹에서 받은 정보를 백엔드에 전송하는 방식. get과 post의 차이는 데이터를 하나씩 보낼지, 묶어서 보낼지의 차이.
+    -->
+
+
+</body>
+</html>
